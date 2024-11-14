@@ -1,6 +1,8 @@
 services:
   homeassistant:
     container_name: homeassistant
+    ports:
+      - "8123:8123"
     image: "ghcr.io/home-assistant/home-assistant:stable"
     volumes:
       - ~/homelab/home-assistant/config:/config

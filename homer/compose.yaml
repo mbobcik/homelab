@@ -1,0 +1,16 @@
+services:
+  homer:
+    image: b4bz/homer:latest
+    container_name: homer
+    volumes:
+      - ~homelab/homer:/www/assets
+    ports:
+      - "80:8080"
+    expose:
+      - 80
+    restart: unless-stopped
+    environment:
+      - UID=1000
+      - GID=1000
+      - INIT_ASSETS=1 # default, requires the config directory to be writable for the container user (see user option)
+    

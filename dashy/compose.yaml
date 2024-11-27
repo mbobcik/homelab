@@ -24,7 +24,5 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
-    deploy:
-      resources:
-        limits:
-          memory: 1024m
+    memory-swap: -1
+    memory-swappiness: 100

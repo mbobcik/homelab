@@ -9,15 +9,15 @@
 title: "Bobcik homelab"
 subtitle: "Homer dashboard"
 # documentTitle: "Welcome" # Customize the browser tab text
-logo: "assets/logo.png"
+#logo: "assets/logo.png"
 # Alternatively a fa icon can be provided:
-# icon: "fas fa-skull-crossbones"
+icon: "fas fa-skull-crossbones"
 
 header: true # Set to false to hide the header
 # Optional: Different hotkey for search, defaults to "/"
 hotkey:
   search: "Shift"
-footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
+footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a></p>' # set false if you want to hide it.
 
 columns: "3" # "auto" or number (must be a factor of 12: 1, 2, 3, 4, 6, 12)
 connectivityCheck: true # whether you want to display a message when the apps are not accessible anymore (VPN disconnected for example).
@@ -78,76 +78,78 @@ colors:
     background-image: "/assets/your/dark/bg.png" # prefix with your sub subpath if any (ex: /homer/assets/...)
 
 # Optional message
-message:
-  # url: "https://<my-api-endpoint>" # Can fetch information from an endpoint to override value below.
-  # mapping: # allows to map fields from the remote format to the one expected by Homer
-  #   title: 'id' # use value from field 'id' as title
-  #   content: 'value' # value from field 'value' as content
-  # refreshInterval: 10000 # Optional: time interval to refresh message
-  #
-  # Real example using chucknorris.io for showing Chuck Norris facts as messages:
-  # url: https://api.chucknorris.io/jokes/random
-  # mapping:
-  #   title: 'id'
-  #   content: 'value'
-  # refreshInterval: 10000
-  style: "is-warning"
-  title: "Optional message!"
-  icon: "fa fa-exclamation-triangle"
-  # The content also accepts HTML content, so you can add divs, images or whatever you want to make match your needs.
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+# message:
+#   # url: "https://<my-api-endpoint>" # Can fetch information from an endpoint to override value below.
+#   # mapping: # allows to map fields from the remote format to the one expected by Homer
+#   #   title: 'id' # use value from field 'id' as title
+#   #   content: 'value' # value from field 'value' as content
+#   # refreshInterval: 10000 # Optional: time interval to refresh message
+#   #
+#   # Real example using chucknorris.io for showing Chuck Norris facts as messages:
+#   # url: https://api.chucknorris.io/jokes/random
+#   # mapping:
+#   #   title: 'id'
+#   #   content: 'value'
+#   # refreshInterval: 10000
+#   style: "is-warning"
+#   title: "Optional message!"
+#   icon: "fa fa-exclamation-triangle"
+#   # The content also accepts HTML content, so you can add divs, images or whatever you want to make match your needs.
+#   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 
 # Optional navbar
-# links: [] # Allows for navbar (dark mode, layout, and search) without any links
-links:
-  - name: "Link 1"
-    icon: "fab fa-github"
-    url: "https://github.com/bastienwirtz/homer"
-    target: "_blank" # optional html tag target attribute
-  - name: "link 2"
-    icon: "fas fa-book"
-    url: "https://github.com/bastienwirtz/homer"
-  # this will link to a second homer page that will load config from page2.yml and keep default config values as in config.yml file
-  # see url field and assets/page.yml used in this example:
-  - name: "Second Page"
-    icon: "fas fa-file-alt"
-    url: "#page2"
+links: [] # Allows for navbar (dark mode, layout, and search) without any links
+#links:
+#  - name: "Link 1"
+#    icon: "fab fa-github"
+#    url: "https://github.com/bastienwirtz/homer"
+#    target: "_blank" # optional html tag target attribute
+#  - name: "link 2"
+#    icon: "fas fa-book"
+#    url: "https://github.com/bastienwirtz/homer"
+#  # this will link to a second homer page that will load config from page2.yml and keep default config values as in config.yml file
+#  # see url field and assets/page.yml used in this example:
+#  - name: "Second Page"
+#    icon: "fas fa-file-alt"
+#    url: "#page2"
 
 # Services
 # First level array represents a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
-  - name: "Application"
+  - name: "Applications"
     icon: "fas fa-code-branch"
     # A path to an image can also be provided. Note that icon take precedence if both icon and logo are set.
     # logo: "path/to/logo"
     # class: "highlight-purple" # Optional css class to add on the service group. 
     items:
-      - name: "Awesome app"
-        logo: "assets/tools/sample.png"
+      - name: "Transmission"
+        logo: "assets/transmission.png"
         # Alternatively a fa icon can be provided:
         # icon: "fab fa-jenkins"
-        subtitle: "Bookmark example"
+        subtitle: "Torrent client on bobopi4"
         tag: "app"
-        keywords: "self hosted reddit" # optional keyword used for searching purpose
-        url: "https://www.reddit.com/r/selfhosted/"
+        keywords: "" # optional keyword used for searching purpose
+        url: "http://bobopi4.local:8080/transmission/web"
         target: "_blank" # optional html tag target attribute
-      - name: "Another one"
-        logo: "assets/tools/sample2.png"
-        subtitle: "Another application"
-        tag: "app"
-        # Optional tagstyle
-        tagstyle: "is-success"
-        url: "#"
-  - name: "Other group"
+      # - name: "Another one"
+      #   logo: "assets/tools/sample2.png"
+      #   subtitle: "Another application"
+      #   tag: "app"
+      #   # Optional tagstyle
+      #   tagstyle: "is-success"
+      #   url: "#"
+  - name: "Administration"
     icon: "fas fa-heartbeat"
     items:
-      - name: "Pi-hole"
-        logo: "assets/tools/sample.png"
+      - name: "OpenMediaVault"
+        subtitle: "NAS management on bobopi4"
+        logo: "assets/openmediavault.png"
         # subtitle: "Network-wide Ad Blocking" # optional, if no subtitle is defined, PiHole statistics will be shown
-        tag: "other"
+        tag: "admin"
         url: "http://192.168.0.151/admin"
-        type: "PiHole" # optional, loads a specific component that provides extra features. MUST MATCH a file name (without file extension) available in `src/components/services`
-        target: "_blank" # optional html a tag target attribute
+        # type: "PiHole" # optional, loads a specific component that provides extra features. MUST MATCH a file name (without file extension) available in `src/components/services`
+        # target: "_blank" # optional html a tag target attribute
+        keywords: "omv nas storage"
         # class: "green" # optional custom CSS class for card, useful with custom stylesheet
         # background: red # optional color for card to set color directly without custom stylesheet

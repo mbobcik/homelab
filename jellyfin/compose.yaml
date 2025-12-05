@@ -1,9 +1,13 @@
 services:
   jellyfin:
-    image: jellyfin/jellyfin
+    image: docker.io/jellyfin/jellyfin
     container_name: jellyfin
     #user: uid:gid
-    network_mode: 'host'
+    #network_mode: 'host'
+    ports:
+      - 8096:8096
+      - 8920:8920 #optional - for https
+      - 7359:7359/udp #optional - for DLNA
     volumes:
       - ~/homelab/jellyfin/config:/config
       - ~/homelab/jellyfin/cache:/cache

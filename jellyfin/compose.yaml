@@ -8,12 +8,13 @@ services:
       - ~/homelab/jellyfin/config:/config
       - ~/homelab/jellyfin/cache:/cache
       - type: bind
-        source: /media/storage/
+        source: /bazen-large/bazen-large
         target: /media
-      #- type: bind
-      #  source: /path/to/media2
-      #  target: /media2
-      #  read_only: true
+        read_only: true
+      - type: bind
+        source: /bazen-raid/bazen-raid
+        target: /media2
+        read_only: true
       # Optional - extra fonts to be used during transcoding with subtitle burn-in
       #- type: bind
       #  source: /path/to/fonts

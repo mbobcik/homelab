@@ -147,7 +147,7 @@ services:
         logo: "assets/openmediavault.png"
         # subtitle: "Network-wide Ad Blocking" # optional, if no subtitle is defined, PiHole statistics will be shown
         tag: "admin"
-        url: "http://192.168.0.151/admin"
+        url: "http://bobopi4.local/#/login"
         # type: "PiHole" # optional, loads a specific component that provides extra features. MUST MATCH a file name (without file extension) available in `src/components/services`
         # target: "_blank" # optional html a tag target attribute
         keywords: "omv nas storage"
